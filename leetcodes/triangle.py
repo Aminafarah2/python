@@ -1,9 +1,24 @@
-def solution(A):
-    A = sorted([element for element in A if element > 0])
-    for i in range(0, len(A)-2):
-        if A[i] + A[i+1] > A[i+2]:
-            return 
-    return 0
-# Example usage
-input_list = [10, 2, 5, 1, 8, 20]
-print(solution(input_list))
+n = 10
+
+def triangle(n):
+    for i in range(n, 0, -1):
+        print(f'{i}')
+        for j in range(n - i):
+            print(' ', end='')
+        for j in range(2 * i - 1):
+            print('*', end='')
+        print()
+
+triangle(n)
+
+################################################################
+def upside(n):
+    for i in range(1, n + 1):
+        for j in range(n - i):
+            print(' ', end='')
+        for j in range(2 * i - 1):
+            print('*', end='')
+        print()
+
+n = 5
+upside(n)
